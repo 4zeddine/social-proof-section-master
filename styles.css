@@ -1,0 +1,255 @@
+/* CSS variables */
+:root{
+--VeryDarkMagenta: hsl(300, 43%, 22%);
+--SoftPink: hsl(333, 80%, 67%);
+--DarkGrayishMagenta: hsl(303, 10%, 53%);
+--LightGrayishMagenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+}
+/* CSS reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Body styles */
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 15px;
+}
+#top-pattern{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#bottom-pattern{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+/* Main styles */
+main{
+	margin: 7.25rem auto;
+	max-width: 68.75rem;
+}
+
+/* Info section styles styles */
+.info{
+	margin-right: 1.625rem;
+}
+.top-section{
+display: flex;
+justify-content: space-between;
+}
+
+.product-info{
+	color: var(--DarkGrayishMagenta);
+	font-weight: 500;
+	font-size: 1.125rem;
+	line-height: 24px;
+	letter-spacing: -0.01em;
+	margin-top: 1.625rem;
+	margin-bottom: 4.75rem;
+	max-width: 480px;
+}
+h1{
+  font-size: 3.25rem;
+	font-weight: 700;
+	color: var(--VeryDarkMagenta);
+	max-width: 380px;
+}
+
+/* Rating section styles */
+
+.ratings{
+	display: flex;
+	align-items: center;
+	width:480px ;
+	height: 56px;
+	font-weight: 700;
+	font-size: 1.125rem;
+	line-height: 17px;
+	letter-spacing: -0.023em;
+	border-radius: 1rem;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: var(--VeryDarkMagenta);
+	background-color: var(--LightGrayishMagenta);
+}
+
+.stars{
+	margin:0 2rem ;
+}
+.stars img{
+	margin-right: 8px;
+}
+
+#guru{
+	margin-left: 3rem;
+}
+#bestTech{
+	margin-left: 6rem;
+}
+
+/* Testemonials section styles */
+
+.review{
+	display: flex;
+	justify-content: space-between;
+}
+.reviews{
+	width: 286px;
+	height: 148px;
+	border-radius: 1rem;
+	padding: 2.5rem 2rem 2.875rem;
+	color: var(--White);
+	background-color: var(--VeryDarkMagenta);
+}
+.users{
+	display: flex;
+	margin-bottom: 30px;
+}
+.user-img img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+
+}
+.user-info{
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+	margin-top: 2px;
+}
+.user-info h2{
+	font-weight: 700;
+	font-size: 17px;
+}
+.user-info span{
+	font-weight: 700;
+	font-size: 17px;
+	letter-spacing: -0.035em;
+	margin-top: 2px;
+	color: var(--SoftPink);
+}
+.testemonials{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: -0.04em;
+}
+/* Media querry */
+@media (max-width: 1300px) {
+	main{
+		max-width: 90%;
+	}
+	.users{
+		margin-bottom: 10px;
+	}
+	.reviews{
+		width: 260px;
+		height: 148px;
+		padding: 1.5rem 1.5rem 2.875rem;
+	}
+}
+
+@media (max-width: 1080px) {
+	.review{
+		flex-direction: column;
+		align-items: center;
+	}
+	.reviews{
+		width:80%;
+		height: auto;
+		padding: 1.5rem;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 920px) {
+	#guru{
+		margin-left: 0;
+		padding: 0 0.5rem;
+	}
+	#bestTech{
+		margin-left: 0;
+	}
+	.ratings{
+		flex-direction: column;
+		justify-content: center;
+		width:100% ;
+		height: 70px;
+	}
+	.stars{
+		margin-bottom:0.5rem;
+	}
+}
+@media (max-width: 730px){
+	.top-section{
+			flex-direction: column;
+		}
+	#guru{
+			padding: 0;
+		}
+	.info{
+		margin-right: 0;
+	}
+	h1{
+		margin: 0 auto;
+	}
+	.product-info{
+		margin:1rem auto;
+	}
+}
+@media (max-width:420px) {
+	h1{
+		font-size: 2.25rem;
+	}
+	.product-info{
+		font-size: 0.9rem;
+	}
+	.ratings{
+		font-size: 1rem;
+	}
+}
